@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Türkiye'nin en sürükleyici FiveM roleplay deneyimi. Kendi hikayeni yaz, efsaneni yaşa.">
+  <title>MTA RP — FiveM Roleplay Sunucusu</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#" class="navbar__logo">
+        <span class="navbar__logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+        </span>
+        <span class="navbar__logo-text">MTA RP</span>
+      </a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#anasayfa" class="navbar__link navbar__link--active">Ana Sayfa</a>
+        <a href="#karakterler" class="navbar__link">Karakterler</a>
+        <a href="#ekip" class="navbar__link">Ekip</a>
+        <a href="#yayincilar" class="navbar__link">Yayıncılar</a>
+        <a href="#sss" class="navbar__link">SSS</a>
+        <a href="#kurallar" class="navbar__link">Kurallar</a>
+        <a href="#cezalar" class="navbar__link">Cezalar</a>
+        <a href="#portal" class="navbar__link">Portal</a>
+        <a href="https://wiki.example.com" class="navbar__link navbar__link--external" target="_blank" rel="noopener">
+          Wiki
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+        </a>
+      </nav>
+
+      <div class="navbar__actions">
+        <a href="https://youtube.com" class="navbar__social" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+        </a>
+        <a href="https://discord.gg/example" class="navbar__social" target="_blank" rel="noopener" aria-label="Discord">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A17.7 17.7 0 0015.5 3a12 12 0 00-.5 1.1 16.3 16.3 0 00-4.9 0A11.6 11.6 0 009.6 3 17.4 17.4 0 004.7 4.4 18.5 18.5 0 00.3 15.2a17.8 17.8 0 005.4 2.7 13.2 13.2 0 001.1-1.8 11.4 11.4 0 01-1.7-.8l.4-.3a12.5 12.5 0 0010.6 0l.4.3a11.4 11.4 0 01-1.7.8 13.2 13.2 0 001.1 1.8 17.8 17.8 0 005.4-2.7A18.4 18.4 0 0023.7 8.7 17.4 17.4 0 0020.3 4.4zM8.3 13.2c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+        </a>
+        <a href="https://discord.gg/example" class="btn btn--primary btn--sm navbar__cta" target="_blank" rel="noopener">
+          Sunucuya Katıl
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="navbar__burger" id="burgerBtn" aria-label="Menüyü aç">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="anasayfa">
+      <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=1920&q=80" alt="" aria-hidden="true">
+        <div class="hero__overlay"></div>
+        <div class="hero__grid"></div>
+      </div>
+
+      <div class="hero__content">
+        <div class="status-badge" id="serverStatus">
+          <span class="status-badge__dot"></span>
+          <span class="status-badge__text">Sunucu Durumu Kontrol Ediliyor...</span>
+        </div>
+
+        <h1 class="hero__title">
+          Hikayeni Yaz,<br>
+          <span class="text-gold">Efsaneni Yaşa.</span>
+        </h1>
+
+        <p class="hero__desc">
+          Türkiye'nin en sürükleyici FiveM roleplay deneyimine adım atın.
+          Kendi hikayenizi yazın, karakterinizi oluşturun ve unutulmaz anlar yaşayın.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#sehir-hayati" class="btn btn--primary">
+            Keşfet
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://discord.gg/example" class="btn btn--outline" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A17.7 17.7 0 0015.5 3a12 12 0 00-.5 1.1 16.3 16.3 0 00-4.9 0A11.6 11.6 0 009.6 3 17.4 17.4 0 004.7 4.4 18.5 18.5 0 00.3 15.2a17.8 17.8 0 005.4 2.7 13.2 13.2 0 001.1-1.8 11.4 11.4 0 01-1.7-.8l.4-.3a12.5 12.5 0 0010.6 0l.4.3a11.4 11.4 0 01-1.7.8 13.2 13.2 0 001.1 1.8 17.8 17.8 0 005.4-2.7A18.4 18.4 0 0023.7 8.7 17.4 17.4 0 0020.3 4.4zM8.3 13.2c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+            Discord
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll">
+        <span>Keşfet</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </div>
+    </section>
+
+    <!-- Şehir Hayatı -->
+    <section class="section city-life" id="sehir-hayati">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Keşfet</span>
+          <h2 class="section__title">Şehir Hayatı</h2>
+          <p class="section__desc">MTA RP dünyasında sizi bekleyen farklı yaşam alanlarını keşfedin.</p>
+        </div>
+
+        <div class="city-life__layout">
+          <div class="city-life__tabs" role="tablist">
+            <button class="city-life__tab city-life__tab--active" role="tab" aria-selected="true" data-tab="emniyet">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </span>
+              <span class="city-life__tab-label">Emniyet</span>
+            </button>
+            <button class="city-life__tab" role="tab" aria-selected="false" data-tab="saglik">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </span>
+              <span class="city-life__tab-label">Sağlık</span>
+            </button>
+            <button class="city-life__tab" role="tab" aria-selected="false" data-tab="is">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>
+              </span>
+              <span class="city-life__tab-label">İş Dünyası</span>
+            </button>
+            <button class="city-life__tab" role="tab" aria-selected="false" data-tab="yeralti">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              </span>
+              <span class="city-life__tab-label">Yeraltı</span>
+            </button>
+            <button class="city-life__tab" role="tab" aria-selected="false" data-tab="eglence">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M9 18V5l12-2v13M6 18a3 3 0 100-6 3 3 0 000 6zM18 16a3 3 0 100-6 3 3 0 000 6z"/></svg>
+              </span>
+              <span class="city-life__tab-label">Eğlence</span>
+            </button>
+            <button class="city-life__tab" role="tab" aria-selected="false" data-tab="medya">
+              <span class="city-life__tab-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </span>
+              <span class="city-life__tab-label">Medya</span>
+            </button>
+          </div>
+
+          <div class="city-life__panel">
+            <div class="city-life__content city-life__content--active" data-panel="emniyet">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=800&q=80" alt="Emniyet">
+              </div>
+              <div class="city-life__info">
+                <h3>Emniyet</h3>
+                <p>Şehrin düzenini sağlayan polis teşkilatı. Devriye, dedektiflik, SWAT ve daha fazlası.</p>
+              </div>
+            </div>
+            <div class="city-life__content" data-panel="saglik">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&q=80" alt="Sağlık">
+              </div>
+              <div class="city-life__info">
+                <h3>Sağlık</h3>
+                <p>Ambulans ekipleri ve hastane personeli ile hayat kurtarın.</p>
+              </div>
+            </div>
+            <div class="city-life__content" data-panel="is">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80" alt="İş Dünyası">
+              </div>
+              <div class="city-life__info">
+                <h3>İş Dünyası</h3>
+                <p>Kendi işinizi kurun, şirket yönetin veya mevcut işletmelerde kariyer yapın.</p>
+              </div>
+            </div>
+            <div class="city-life__content" data-panel="yeralti">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=800&q=80" alt="Yeraltı">
+              </div>
+              <div class="city-life__info">
+                <h3>Yeraltı</h3>
+                <p>Karanlık sokaklar, gizli anlaşmalar ve tehlikeli ittifaklar.</p>
+              </div>
+            </div>
+            <div class="city-life__content" data-panel="eglence">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=800&q=80" alt="Eğlence">
+              </div>
+              <div class="city-life__info">
+                <h3>Eğlence</h3>
+                <p>Gece kulüpleri, etkinlikler, yarışlar ve sosyal hayatın kalbinde yer alın.</p>
+              </div>
+            </div>
+            <div class="city-life__content" data-panel="medya">
+              <div class="city-life__image">
+                <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=800&q=80" alt="Medya">
+              </div>
+              <div class="city-life__info">
+                <h3>Medya</h3>
+                <p>Habercilik, yayıncılık ve içerik üretimi ile şehrin sesini duyurun.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nasıl Katılırım -->
+    <section class="section steps" id="nasil-katilirim">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Başla</span>
+          <h2 class="section__title">Nasıl Katılırım?</h2>
+          <p class="section__desc">Üç basit adımda MTA RP ailesine katılın.</p>
+        </div>
+
+        <div class="steps__grid">
+          <div class="step-card">
+            <div class="step-card__icon">
+              <span class="step-card__number">1</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <h3>Discord'a Katıl</h3>
+            <p>Discord sunucumuza katılarak topluluğumuzla tanışın ve başvuru sürecini başlatın.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__icon">
+              <span class="step-card__number">2</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></svg>
+            </div>
+            <h3>Başvurunu Yap</h3>
+            <p>Karakter geçmişini oluştur, kuralları öğren ve whitelist başvurunu tamamla.</p>
+          </div>
+          <div class="step-card">
+            <div class="step-card__icon">
+              <span class="step-card__number">3</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M6 12h4M14 12h4M8 10v4M16 10v4"/></svg>
+            </div>
+            <h3>Şehre Adım At</h3>
+            <p>Onay aldıktan sonra sunucuya bağlan ve kendi hikayeni yazmaya başla.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video / Galeri -->
+    <section class="section gallery" id="galeri">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M8 5v14l11-7z"/></svg>
+            İzle
+          </span>
+          <h2 class="section__title">Dünyamıza Göz Atın</h2>
+        </div>
+
+        <div class="gallery__video">
+          <div class="gallery__video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0"
+              title="MTA RP Tanıtım Videosu"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+
+        <div class="section__header section__header--spaced">
+          <span class="section__label">Galeri</span>
+          <h2 class="section__title">Yaşayan Dünyayı Keşfedin</h2>
+          <p class="section__desc">MTA RP dünyasından büyüleyici görsellere ve epik anlara kendinizi bırakın.</p>
+        </div>
+
+        <div class="gallery__grid">
+          <div class="gallery__item gallery__item--large">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=800&q=80" alt="Şehir manzarası" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1514565131-fce0801e5785?w=600&q=80" alt="Gece şehri" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=600&q=80" alt="Araçlar" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80" alt="Dağ manzarası" loading="lazy">
+          </div>
+          <div class="gallery__item">
+            <img src="https://images.unsplash.com/photo-1477959858597-3ac0414c87ab?w=600&q=80" alt="Şehir silüeti" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="container">
+        <div class="cta__box">
+          <h3>Hikayene başlamaya hazır mısın?</h3>
+          <p>Discord sunucumuza katıl ve MTA RP dünyasına adım at.</p>
+          <a href="https://discord.gg/example" class="btn btn--primary" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A17.7 17.7 0 0015.5 3a12 12 0 00-.5 1.1 16.3 16.3 0 00-4.9 0A11.6 11.6 0 009.6 3 17.4 17.4 0 004.7 4.4 18.5 18.5 0 00.3 15.2a17.8 17.8 0 005.4 2.7 13.2 13.2 0 001.1-1.8 11.4 11.4 0 01-1.7-.8l.4-.3a12.5 12.5 0 0010.6 0l.4.3a11.4 11.4 0 01-1.7.8 13.2 13.2 0 001.1 1.8 17.8 17.8 0 005.4-2.7A18.4 18.4 0 0023.7 8.7 17.4 17.4 0 0020.3 4.4zM8.3 13.2c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+            Discord'a Katıl
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Karakterler -->
+    <section class="section characters" id="karakterler">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Topluluk</span>
+          <h2 class="section__title">Öne Çıkan Karakterler</h2>
+          <p class="section__desc">Şehrin en etkileyici hikayelerini yazan oyuncularımız.</p>
+        </div>
+        <div class="characters__grid">
+          <article class="character-card">
+            <div class="character-card__avatar">AK</div>
+            <h4>Ahmet Kaya</h4>
+            <span class="character-card__role">Polis Komiseri</span>
+            <p>Şehrin güvenliği için gece gündüz çalışan deneyimli bir emniyet mensubu.</p>
+          </article>
+          <article class="character-card">
+            <div class="character-card__avatar">EY</div>
+            <h4>Elif Yıldız</h4>
+            <span class="character-card__role">Doktor</span>
+            <p>Hastanenin en yetenekli cerrahı, her gün hayat kurtarmaya devam ediyor.</p>
+          </article>
+          <article class="character-card">
+            <div class="character-card__avatar">MD</div>
+            <h4>Mehmet Demir</h4>
+            <span class="character-card__role">İş İnsanı</span>
+            <p>Şehrin en büyük holdinginin sahibi, iş dünyasının güçlü ismi.</p>
+          </article>
+          <article class="character-card">
+            <div class="character-card__avatar">SC</div>
+            <h4>Selin Çelik</h4>
+            <span class="character-card__role">Gazeteci</span>
+            <p>Şehrin en cesur muhabiri, gerçekleri her koşulda ortaya çıkarıyor.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ekip -->
+    <section class="section team" id="ekip">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Yönetim</span>
+          <h2 class="section__title">Ekibimiz</h2>
+          <p class="section__desc">FiveM Roleplay'yi hayata geçiren tutkulu ekip.</p>
+        </div>
+        <div class="team__grid">
+          <article class="team-card">
+            <div class="team-card__avatar">RA</div>
+            <h4>Rüzgar Altın</h4>
+            <span class="team-card__role">Kurucu & Developer</span>
+          </article>
+          <article class="team-card">
+        </div>
+      </div>
+    </section>
+
+    <!-- SSS -->
+    <section class="section faq" id="sss">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">Yardım</span>
+          <h2 class="section__title">Sıkça Sorulan Sorular</h2>
+        </div>
+        <div class="faq__list">
+          <details class="faq__item">
+            <summary>Sunucuya nasıl katılabilirim?</summary>
+            <p>Discord sunucumuza katılarak whitelist başvurusu yapmanız gerekmektedir. Başvurunuz onaylandıktan sonra FiveM üzerinden sunucuya bağlanabilirsiniz.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Whitelist başvurusu ne kadar sürer?</summary>
+            <p>Başvurular genellikle 24-48 saat içinde değerlendirilir. Yoğun dönemlerde bu süre uzayabilir.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Sunucu gereksinimleri nelerdir?</summary>
+            <p>FiveM istemcisi, lisanslı GTA V kopyası ve stabil bir internet bağlantısı gereklidir. Minimum 8 GB RAM önerilir.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Roleplay kuralları nerede?</summary>
+            <p>Kurallar sayfamızda tüm roleplay kurallarını detaylı şekilde bulabilirsiniz. Başvuru öncesi mutlaka okuyun.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Kurallar -->
+    <section class="section rules" id="kurallar">
+      <div class="container container--narrow">
+        <div class="section__header">
+          <span class="section__label">Kurallar</span>
+          <h2 class="section__title">Sunucu Kuralları</h2>
+          <p class="section__desc">Herkes için adil ve eğlenceli bir deneyim için kurallara uyun.</p>
+        </div>
+        <div class="rules__list">
+          <div class="rules__item"><span>01</span><p>Powergaming, metagaming ve RDM/VDM kesinlikle yasaktır.</p></div>
+          <div class="rules__item"><span>02</span><p>Karakterinize uygun roleplay yapın, gerçekçilikten ödün vermeyin.</p></div>
+          <div class="rules__item"><span>03</span><p>Discord ve oyun içi iletişimde saygılı olun.</p></div>
+          <div class="rules__item"><span>04</span><p>Hile, bug abuse ve exploit kullanımı kalıcı ban sebebidir.</p></div>
+          <div class="rules__item"><span>05</span><p>Yetkili kararlarına saygı gösterin, itirazları ticket ile yapın.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cezalar -->
+    <section class="section penalties" id="cezalar">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__label">Disiplin</span>
+          <h2 class="section__title">Ceza Sistemi</h2>
+        </div>
+        <div class="penalties__table-wrapper">
+          <table class="penalties__table">
+            <thead>
+              <tr>
+                <th>İhlal</th>
+                <th>1. İhlal</th>
+                <th>2. İhlal</th>
+                <th>3. İhlal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>RDM / VDM</td>
+                <td>3 Gün Ban</td>
+                <td>7 Gün Ban</td>
+                <td>Kalıcı Ban</td>
+              </tr>
+              <tr>
+                <td>Powergaming</td>
+                <td>Uyarı</td>
+                <td>1 Gün Ban</td>
+                <td>3 Gün Ban</td>
+              </tr>
+              <tr>
+                <td>Metagaming</td>
+                <td>Uyarı</td>
+                <td>1 Gün Ban</td>
+                <td>7 Gün Ban</td>
+              </tr>
+              <tr>
+                <td>Hile / Exploit</td>
+                <td colspan="3" class="penalties__permanent">Kalıcı Ban</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="#" class="footer__logo">
+            <span class="navbar__logo-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+              </svg>
+            </span>
+            MTA RP
+          </a>
+          <p>Hikayelerin hayat bulduğu bir dünyanın parçası olun. MTA RP topluluğuna katılın ve en sürükleyici roleplay deneyimini yaşayın.</p>
+          <div class="footer__socials">
+            <a href="https://discord.gg/example" target="_blank" rel="noopener" aria-label="Discord">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.3 4.4A17.7 17.7 0 0015.5 3a12 12 0 00-.5 1.1 16.3 16.3 0 00-4.9 0A11.6 11.6 0 009.6 3 17.4 17.4 0 004.7 4.4 18.5 18.5 0 00.3 15.2a17.8 17.8 0 005.4 2.7 13.2 13.2 0 001.1-1.8 11.4 11.4 0 01-1.7-.8l.4-.3a12.5 12.5 0 0010.6 0l.4.3a11.4 11.4 0 01-1.7.8 13.2 13.2 0 001.1 1.8 17.8 17.8 0 005.4-2.7A18.4 18.4 0 0023.7 8.7 17.4 17.4 0 0020.3 4.4zM8.3 13.2c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.5 6.2a3 3 0 00-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 00.5 6.2 31.6 31.6 0 000 12a31.6 31.6 0 00.5 5.8 3 3 0 002.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 002.1-2.1A31.6 31.6 0 0024 12a31.6 31.6 0 00-.5-5.8zM9.6 15.6V8.4l6.2 3.6-6.2 3.6z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4>Sayfalar</h4>
+          <ul>
+            <li><a href="#anasayfa">Ana Sayfa</a></li>
+            <li><a href="#karakterler">Karakterler</a></li>
+            <li><a href="#ekip">Ekip</a></li>
+            <li><a href="#yayincilar">Yayıncılar</a></li>
+            <li><a href="#sss">SSS</a></li>
+            <li><a href="#kurallar">Kurallar</a></li>
+            <li><a href="#cezalar">Cezalar</a></li>
+            <li><a href="#portal">Portal</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Harici</h4>
+          <ul>
+            <li><a href="https://wiki.example.com" target="_blank" rel="noopener">Wiki</a></li>
+            <li><a href="#" target="_blank" rel="noopener">Mağaza</a></li>
+            <li><a href="https://discord.gg/example" target="_blank" rel="noopener">Discord</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4>Yasal</h4>
+          <ul>
+            <li><a href="#">Kullanım Şartları</a></li>
+            <li><a href="#">Gizlilik Politikası</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p>&copy; 2026 MTA RP. Tüm hakları saklıdır.</p>
+        <p class="footer__disclaimer">MTA RP, Rockstar Games veya Take-Two Interactive ile bağlantılı değildir.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Cookie Banner -->
+  <div class="cookie-banner" id="cookieBanner">
+    <p>Bu site deneyiminizi iyileştirmek için çerezler kullanır. Siteyi kullanmaya devam ederek çerez kullanımını kabul etmiş olursunuz.</p>
+    <button class="btn btn--sm btn--outline" id="cookieAccept">Tamam</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
